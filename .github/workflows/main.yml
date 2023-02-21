@@ -33,3 +33,6 @@ jobs:
           files: |
             *.mobi
             dict/*.mobi
+
+permissions:
+  contents: write
