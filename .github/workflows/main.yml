@@ -16,7 +16,7 @@ jobs:
       - run: python filter.py
       - run: python dict.py
       - run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: "marvinpinto/action-automatic-releases@3660044c5b93f964f130585c8eebaeef3c9893bd"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
