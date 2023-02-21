@@ -1,13 +1,12 @@
-name: "Build Dictionary (Pre-release)"
+name: "Stable Build"
 on:
   push:
     tags:
-      - "v*.*.*-rc*"
-      - "v*.*.*"
+      - "v*.*.*-stable"
 
 jobs:
   build:
-    name: "Pre Release"
+    name: "Build & Release"
     runs-on: "windows-latest"
     steps:
       - name: "Clone Repo"
@@ -22,13 +21,12 @@ jobs:
         run: |
           python filter.py
           python dict.py
-          python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
+          python kindlegen.py dict/dict.opf -c2 -verbose -dont_append_source -locale en
       
       - name: "Publish"
         uses: softprops/action-gh-release@v1
         with:
-          prerelease: true
-          name: "Latest Pre-Release"
+          name: "${{github.ref_name}}"
           tag_name: ${{ github.ref_name }}
           files: |
             dict/*.mobi
