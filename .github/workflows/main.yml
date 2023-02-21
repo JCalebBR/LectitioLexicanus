@@ -20,9 +20,10 @@ jobs:
           python-version: '3.9'
 
       - name: "Build"
-        run: python filter.py
-        run: python dict.py
-        run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
+        run: |
+          python filter.py
+          python dict.py
+          python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
       
       - name: "Publish"
         uses: softprops/action-gh-release@v1
