@@ -23,6 +23,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Build Dictionary](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/main.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/main.yml)
 
 
 
