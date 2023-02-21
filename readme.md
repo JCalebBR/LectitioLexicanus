@@ -45,7 +45,7 @@
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
 - [Downloading / Installing](#downloading--installing)
-- [Getting Started](#getting-started)
+- [Local build](#local-build)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Roadmap](#roadmap)
@@ -86,13 +86,7 @@ Note that, the pre-releases are always the latest version of the dictionary, but
 
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-If you are simply interested in using the dictionary, you can download the latest release [here]([releases-url])
-
-Paste the MOBI file into your Kindle's `documents/dictionaries` folder and it should be available for use.
-
-Note that the pre-releases are always the latest version of the dictionary, but may not be stable and can also have bigger filesizes.
+## Local build
 
 ### Prerequisites
 
