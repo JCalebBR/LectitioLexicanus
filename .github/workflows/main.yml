@@ -23,8 +23,7 @@ jobs:
       - name: "Generate mobi"
         run: |
           kindlegen.exe dict/dict.opf -c2 -verbose -dont_append_source
-          
-
+      - working-directory: dict
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -33,4 +32,3 @@ jobs:
           title: "Development Build"
           files: |
             *.mobi
-            dict/*.mobi
