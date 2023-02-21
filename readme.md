@@ -18,14 +18,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Build Dictionary](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/main.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/main.yml)
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -42,6 +34,10 @@
     ·
     <a href="https://github.com/JCalebBR/LectitioLexicanus/issues">Request Feature</a>
   </p>
+
+[![Pre-release Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml)
+[![Python]][Python-url]
+[![Stable Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml)
 </div>
 
 
@@ -52,9 +48,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
@@ -88,26 +81,20 @@ This project is a dictionary for the Warhammer 40k universe, based on the Lexica
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-### Built With
-
-* [![Python]][Python-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
 If you are simply interested in using the dictionary, you can download the latest release [here]([releases-url])
 
+Paste the MOBI file into your Kindle's `documents/dictionaries` folder and it should be available for use.
+
+Note that the pre-releases are always the latest version of the dictionary, but may not be stable and can also have bigger filesizes.
+
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * pip
   ```sh
-  pip install requests tqdm json re
+  pip install requests tqdm
   ```
 
 ### Installation
@@ -175,7 +162,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU GPLv3. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,17 +180,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/JCalebBR/LectitioLexicanus.svg?style=for-the-badge
-[contributors-url]: https://github.com/JCalebBR/LectitioLexicanus/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/JCalebBR/LectitioLexicanus.svg?style=for-the-badge
-[forks-url]: https://github.com/JCalebBR/LectitioLexicanus/network/members
-[stars-shield]: https://img.shields.io/github/stars/JCalebBR/LectitioLexicanus.svg?style=for-the-badge
-[stars-url]: https://github.com/JCalebBR/LectitioLexicanus/stargazers
-[issues-shield]: https://img.shields.io/github/issues/JCalebBR/LectitioLexicanus.svg?style=for-the-badge
-[issues-url]: https://github.com/JCalebBR/LectitioLexicanus/issues
-[license-shield]: https://img.shields.io/github/license/JCalebBR/LectitioLexicanus.svg?style=for-the-badge
-[license-url]: https://github.com/JCalebBR/LectitioLexicanus/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
 [example-01]: images/example-01.png
 [example-02]: images/example-02.png
 [example-03]: images/example-03.png
