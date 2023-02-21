@@ -74,11 +74,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-<img src="images/example%20(1).png" alt= “” width="40%" height="40%">
-<img src="images/example%20(2).png" alt= “” width="40%" height="40%">
-<img src="images/example%20(3).png" alt= “” width="40%" height="40%">
-<img src="images/example%20(4).png" alt= “” width="40%" height="40%">
+<p float="left">
+    <img src="images/example%20(1).png" alt= “” width="35%" height="35%">
+    <img src="images/example%20(2).png" alt= “” width="35%" height="35%">
+    <img src="images/example%20(3).png" alt= “” width="35%" height="35%">
+    <img src="images/example%20(4).png" alt= “” width="35%" height="35%">
+</p>
 <br />
 <br />
 This project is a dictionary for the Warhammer 40k universe, based on the Lexicanum website. It is intended to be used on Kindles, but can be used on any device that supports MOBI files.
