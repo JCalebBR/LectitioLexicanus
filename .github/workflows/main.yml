@@ -1,27 +1,29 @@
-name: "Build Dictionary"
+name: "Build Dictionary (Pre-release)"
 on:
   push:
     branches:
       - "main"
+    tags:
+      - "v*.*.*-rc*"
 
 jobs:
   build:
     name: "Pre Release"
     runs-on: "windows-latest"
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - name: "Build"
+        uses: actions/checkout@v3
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - run: python filter.py
-      - run: python dict.py
-      - run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
-      - uses: "marvinpinto/action-automatic-releases@6273874b61ebc8c71f1a61b2d98e234cf389b303"
+        run: python filter.py
+        run: python dict.py
+        run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
+      
+      - name: "Publish"
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
           prerelease: true
-          title: "Development Build"
           files: |
             *.mobi
             dict/*.mobi
