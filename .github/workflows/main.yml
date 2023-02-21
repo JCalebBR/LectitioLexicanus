@@ -15,7 +15,7 @@ jobs:
           python-version: '3.9'
       - run: python filter.py
       - run: python dict.py
-      - run: .\kindlegen.exe dict/dict.opf -verbose -dont_append_source -locale en || 0
+      - run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
