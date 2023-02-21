@@ -2,7 +2,7 @@ name: "Build Dictionary"
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   build:
