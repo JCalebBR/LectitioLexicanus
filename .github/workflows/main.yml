@@ -1,0 +1,36 @@
+---
+name: "pre-release"
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  pre-release:
+    name: "Pre Release"
+    runs-on: "windows-latest"
+
+    steps:
+      - name: "Build dict contents"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - run: python filter.py
+      - run: python dict.py
+      
+      - name: "Generate mobi"
+        run: |
+          kindlegen.exe dict/dict.opf -c2 -verbose -dont_append_source
+          
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            *.mobi
+            dict/*.mobi
