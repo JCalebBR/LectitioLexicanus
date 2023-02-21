@@ -9,7 +9,6 @@ jobs:
     name: "Pre Release"
     runs-on: "windows-latest"
     steps:
-      - name: "Build dict contents"
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
@@ -17,10 +16,7 @@ jobs:
       - run: python filter.py
       - run: python dict.py
       
-      - name: "Generate mobi"
-        run: |
-          kindlegen.exe dict/dict.opf -c2 -verbose -dont_append_source
-      - working-directory: dict
+      - run: kindlegen.exe dict/dict.opf -c2 -verbose -dont_append_source
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -29,3 +25,4 @@ jobs:
           title: "Development Build"
           files: |
             *.mobi
+            dict/*.mobi
