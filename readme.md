@@ -36,33 +36,22 @@
   </p>
 
 [![Pre-release Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml)
-[![Python]][Python-url]
 [![Stable Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml)
 </div>
 
 
-
+## Table of Contents
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Downloading / Installing](#downloading--installing)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 
 <!-- ABOUT THE PROJECT -->
@@ -75,8 +64,23 @@
     <img src="images/example%20(4).png" alt= “” width="35%" height="35%">
 </p>
 <br />
-<br />
 This project is a dictionary for the Warhammer 40k universe, based on the Lexicanum website. It is intended to be used on Kindles, but can be used on any device that supports MOBI files.
+
+The dictionary is automatically generated after parsing and filtering a dump of allpages of the Lexicanum website. The dictionary is then converted into a MOBI file using Amazon's `kindlegen.exe` tool.
+
+It offers support for inflections, based on redirects of a page. For example, the page "Neverborn" redirects to "Daemon". By highlighting either word, one would be able to see the same definition.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Downloading / Installing
+
+In order to obtain the latest version of the dictionary, you can download the latest release [here]([releases-url]). 
+
+Connect your kindle via USB, open the `documents` folder and paste the MOBI file into the `dictionaries` folder. It should be available for use after that.
+
+If you already have an older version and wish to update, simply delete the old MOBI file and paste the new one in its place. Then restart your Kindle.
+
+Note that, the pre-releases are always the latest version of the dictionary, but may not be stable and can also have bigger filesizes due to no compression.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
