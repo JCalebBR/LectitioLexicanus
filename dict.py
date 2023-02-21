@@ -1,7 +1,7 @@
 import json
 
 with open("dict/content.html", "w", encoding="utf-8") as content, open(
-    "new-output.jsonl", "r"
+    "filtered-output.jsonl", "r"
 ) as words:
     content.write(
         """<html xmlns:math="http://exslt.org/math" xmlns:svg="http://www.w3.org/2000/svg"
