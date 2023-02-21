@@ -1,4 +1,4 @@
-name: "Build mobi"
+name: "Build Dictionary"
 on:
   push:
     branches:
