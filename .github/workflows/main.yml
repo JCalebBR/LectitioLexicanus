@@ -11,11 +11,15 @@ jobs:
     name: "Pre Release"
     runs-on: "windows-latest"
     steps:
-      - name: "Build"
+      - name: "Clone Repo"
         uses: actions/checkout@v3
+
+      - name: "Install Python"
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+
+      - name: "Build"
         run: python filter.py
         run: python dict.py
         run: python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
