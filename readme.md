@@ -183,6 +183,6 @@ Distributed under the GNU GPLv3. See `LICENSE.txt` for more information.
 [example-02]: images/example-02.png
 [example-03]: images/example-03.png
 [example-04]: images/example-04.png
-[releases-url]: https://github.com/JCalebBR/releases
+[releases-url]: https://github.com/JCalebBR/LectitioLexicanus/releases
 [Python]: https://img.shields.io/badge/python-000000?style=for-the-badge&logo=python
 [Python-url]: https://www.python.org/
