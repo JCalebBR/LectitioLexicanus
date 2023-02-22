@@ -74,7 +74,7 @@ It offers support for inflections, based on redirects of a page. For example, th
 
 ## Downloading / Installing
 
-In order to obtain the latest version of the dictionary, you can download the latest release [releases-url]. 
+In order to obtain the latest version of the dictionary, you can download the latest release [here][releases-url]. 
 
 Connect your kindle via USB, open the `documents` folder and paste the MOBI file into the `dictionaries` folder. It should be available for use after that.
 
