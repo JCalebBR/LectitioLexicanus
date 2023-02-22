@@ -37,6 +37,8 @@
 
 [![Pre-release Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/prerelease.yml)
 [![Stable Build](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml/badge.svg)](https://github.com/JCalebBR/LectitioLexicanus/actions/workflows/release.yml)
+<br />
+[![](https://dcbadge.vercel.app/api/server/pjQWRWknd4)](https://discord.gg/pjQWRWknd4)
 </div>
 
 
@@ -69,6 +71,8 @@ This project is a dictionary for the Warhammer 40k universe, based on the Lexica
 The dictionary is automatically generated after parsing and filtering a dump of allpages of the Lexicanum website. The dictionary is then converted into a MOBI file using Amazon's `kindlegen.exe` tool.
 
 It offers support for inflections, based on redirects of a page. For example, the page "Neverborn" redirects to "Daemon". By highlighting either word, one would be able to see the same definition.
+
+You can also join the [discord](https://discord.gg/pjQWRWknd4) to keep up with updates and changes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
