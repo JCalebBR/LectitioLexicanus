@@ -169,6 +169,7 @@ Distributed under the GNU GPLv3. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
+* [Lexicanum](https://wh40k.lexicanum.com/) - For hosting their wiki and making such a project possible
 * [Jake McCrary](https://jakemccrary.com) - For his insightful documentation on creating a Kindle dictionary.
 * [Games Workshop and The Black Library](https://www.blacklibrary.com/) - For creating the Warhammer 40k universe.
   
