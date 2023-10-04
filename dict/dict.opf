@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+  <metadata>
+    <dc:title>Lectitio Lexicanus by JCaleb</dc:title>
+    <dc:creator opf:role="aut">Josué Caleb</dc:creator>
+    <dc:language>en-us</dc:language>
+    <meta name="cover" content="my-cover-image" />
+    <x-metadata>
+      <DictionaryInLanguage>en-us</DictionaryInLanguage>
+      <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
+      <DefaultLookupIndex>default</DefaultLookupIndex>
+    </x-metadata>
+  </metadata>
+  <manifest>
+    <!-- <item href="cover-image.jpg" id="my-cover-image" media-type="image/jpg" /> -->
+    <item id="cover"
+          href="cover.html"
+          media-type="application/xhtml+xml" />
+    <item id="usage"
+          href="usage.html"
+          media-type="application/xhtml+xml" />
+    <item id="copyright"
+          href="copyright.html"
+          media-type="application/xhtml+xml" />
+    <item id="content"
+          href="content.html"
+          media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+    <itemref idref="cover" />
+    <itemref idref="usage" />
+    <itemref idref="copyright"/>
+    <itemref idref="content"/>
+  </spine>
+  <guide>
+    <reference type="index" title="IndexName" href="content.html"/>
+  </guide>
+</package>
