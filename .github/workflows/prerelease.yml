@@ -3,6 +3,9 @@ on:
   push:
     tags:
       - "v*.*.*-rc*"
+  pull_request:
+    branches:
+      - "rust"
 
 jobs:
   build:
