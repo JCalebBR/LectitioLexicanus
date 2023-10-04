@@ -94,9 +94,9 @@ Note that, the pre-releases are always the latest version of the dictionary, but
 
 ### Prerequisites
 
-* pip
+* cargo
   ```sh
-  pip install requests tqdm
+  cargo install
   ```
 
 ### Installation
@@ -105,24 +105,14 @@ Note that, the pre-releases are always the latest version of the dictionary, but
    ```sh
    git clone https://github.com/JCalebBR/LectitioLexicanus.git
    ```
-2. Run `lexicanum.py` to obtain the latest version of the Lexicanum Dump.
+2. Run `cargo run --release` to obtain the latest version of the Lexicanum Dump. This will create a file called `filtered-output.jsonl` which will be used to create the dictionary. This will create a file called `content.html` in the `dict` directory, which will be the contents of the dictionary.
    
-   **Note that this will take a while due to the large size of the Lexicanum website and how data is obtained.**
+   **Note that this will take approximately 5 minutes**
     ```sh	
-    python lexicanum.py
+    cargo run --release
     ```
 
-3. Run `filter.py` to filter results. This will create a file called `filtered-output.jsonl` which will be used to create the dictionary.
-    ```sh	
-    python filter.py
-    ```
-
-4. Run `dict.py` to create the dictionary. This will create a file called `content.html` in the `dict` directory, which will be the contents of the dictionary.
-    ```sh	
-    python dict.py
-    ```
-
-5. Run `kindlegen.exe` to create the MOBI file. This will create a file called `dict.mobi` in the `dict` directory, which will be the dictionary.
+3. Run `kindlegen.exe` to create the MOBI file. This will create a file called `dict.mobi` in the `dict` directory, which will be the dictionary.
     ```sh	
     kindlegen.exe dict/dict.opf -c2 -verbose -dont_append_source
     ```

@@ -3,6 +3,9 @@ on:
   push:
     tags:
       - "v*.*.*-rc*"
+  pull_request:
+    branches:
+      - "rust"
 
 jobs:
   build:
@@ -12,16 +15,20 @@ jobs:
       - name: "Clone Repo"
         uses: actions/checkout@v3
 
-      - name: "Install Python"
-        uses: actions/setup-python@v4
+      - name: "Toolchain"
+        uses: actions-rs/toolchain@v1
         with:
-          python-version: '3.9'
-
+          toolchain: stable
+      
+      - name: "Cargo"
+        uses: actions-rs/cargo@v1
+        with:
+          command: run
+          args: --release --all-features
+      
       - name: "Build"
         run: |
-          python filter.py
-          python dict.py
-          python kindlegen.py dict/dict.opf -verbose -dont_append_source -locale en
+          kindlegen.exe dict/dict.opf -verbose -dont_append_source -locale en
       
       - name: "Publish"
         uses: softprops/action-gh-release@v1
