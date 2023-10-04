@@ -5,7 +5,7 @@ on:
       - "v*.*.*-rc*"
   pull_request:
     branches:
-      - "rust"
+      - "main"
 
 jobs:
   build:

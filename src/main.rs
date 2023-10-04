@@ -9,9 +9,9 @@ use std::io::{prelude::*, stderr, BufReader, BufWriter, IsTerminal, Result, Writ
 fn main() {
     term::init(stderr().is_terminal());
     term::hide_cursor().unwrap();
-    // let mut linecount = mapping("./mapping.jsonl").unwrap();
-    // deep_search("./mapping.jsonl", "./dump.jsonl").unwrap();
-    let linecount = filter("./dump.jsonl", "./filtered-output.jsonl", 36343).unwrap();
+    let mut linecount = mapping("./mapping.jsonl").unwrap();
+    deep_search("./mapping.jsonl", "./dump.jsonl").unwrap();
+    linecount = filter("./dump.jsonl", "./filtered-output.jsonl", linecount).unwrap();
     write_dict("./filtered-output.jsonl", "dict/content.html", linecount);
 }
 
