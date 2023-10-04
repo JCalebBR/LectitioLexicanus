@@ -16,11 +16,13 @@ jobs:
       - name: "Clone Repo"
         uses: actions/checkout@v3
 
-      - name: "Toolchain"
-        uses: actions-rs/toolchain@v1
+      - run: rustup toolchain install stable --profile minimal
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2.7.0
         with:
-          toolchain: stable
-      
+          cache-on-failure: "true"
+          cache-all-crates: "true"
+
       - name: "Cargo"
         uses: actions-rs/cargo@v1
         with:
@@ -29,7 +31,7 @@ jobs:
       
       - name: "Build"
         run: |
-          kindlegen.exe dict/dict.opf -verbose -dont_append_source -locale en
+          .\kindlegen.exe dict/dict.opf -verbose -dont_append_source -locale en
       
       - name: "Publish"
         uses: softprops/action-gh-release@v1
